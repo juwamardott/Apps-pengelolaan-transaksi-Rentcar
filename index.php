@@ -10,6 +10,35 @@ $data = getAll();
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 </style>
+<style>
+@keyframes marquee {
+     0% {
+          transform: translate(100%, 0);
+     }
+
+     100% {
+          transform: translate(-100%, 0);
+     }
+}
+
+@keyframes marquee1 {
+     0% {
+          transform: translate(-100%, 0);
+     }
+
+     100% {
+          transform: translate(100%, 0);
+     }
+}
+
+.animate-marquee {
+     animation: marquee 50s linear infinite;
+}
+
+.animate-marquee1 {
+     animation: marquee1 20s linear infinite;
+}
+</style>
 <?php require_once('./layouts/header.php'); ?>
 <div class="pt-28 p-2 w-[95%] mx-auto grid lg:grid-cols-3 gap-4 sm:grid-cols-1">
      <?php while($row = mysqli_fetch_assoc($data)) :  ?>
@@ -33,4 +62,5 @@ $data = getAll();
      </div>
      <?php endwhile; ?>
 </div>
+
 <?php require_once('./layouts/footer.php'); ?>

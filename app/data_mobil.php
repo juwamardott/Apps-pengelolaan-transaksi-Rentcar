@@ -10,7 +10,8 @@ $mbl = getAll();
 <div class="mx-auto pt-28 px-4 h-[800px]">
      <div class="flex items-center justify-between my-4 text-white">
           <h1 class="text-3xl font-semibold ">Data Mobil</h1>
-          <a href="<?=BASEURL?>/app/tambah_mobil.php" class="text-xl block bg-blue-500 p-2 rounded-md text-white">Tambah
+          <a href="<?=BASEURL?>/app/tambah_mobil.php"
+               class="text-base block bg-blue-500 p-2 rounded-md text-white">Tambah
                mobil</a>
      </div>
      <div class="overflow-x-auto bg-white">
@@ -35,7 +36,7 @@ $mbl = getAll();
                          <td class="py-2 px-4 border-b border"><?= $row['cc_mobil']?></td>
                          <td class="py-2 px-4 border-b border"><?= $row['harga_sewa']?></td>
                          <td class="py-2 px-4 border-b border flex justify-evenly">
-                              <a href="<?= BASEURL?>/app/edit_mobil.php?id=<?=$row['id']?>"
+                              <a href="<?= BASEURL?>/app/edit_mobil.php?kode=<?=$row['kode_mobil']?>"
                                    class="block p-1 bg-yellow-500 text-white rounded-sm">Update</a>
                               <a href="<?= BASEURL?>/app/hapus_mobil.php?kode=<?=$row['kode_mobil']?>"
                                    class="block p-1 bg-red-500 text-white rounded-sm">Hapus</a>

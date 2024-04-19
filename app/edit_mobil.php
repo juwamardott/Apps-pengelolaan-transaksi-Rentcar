@@ -1,8 +1,9 @@
 <?php
 require './function.php';
-$data = findCar($_GET['id']);
+$data = findCar($_GET['kode']);
 // var_dump($_POST);
-$id = $data['id'];
+$id = $_GET['kode'];
+// var_dump($id);
 if(isset($_POST['btn-update'])){
      updateMobil($_POST, $id);
      header('location:data_mobil.php');
@@ -13,7 +14,7 @@ if(isset($_POST['btn-update'])){
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 </style>
 <?php require_once('../layouts/header.php') ?>
-<div class="container mx-auto pt-28">
+<div class="container mx-auto pt-28 h-[800px]">
      <h1 class="text-3xl font-semibold mb-8">Form Pesanan Mobil</h1>
      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4  grid grid-cols-3 gap-5" action="" method="POST">
           <div class="mb-4">

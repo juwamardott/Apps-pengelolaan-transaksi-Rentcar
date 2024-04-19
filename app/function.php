@@ -56,7 +56,7 @@ function updateMobil($data, $id){
      $harga_sewa = $data['harga_sewa'];
      $gambar = $data['gambar_mobil'];
 
-     $query = mysqli_query($conn, "UPDATE mobils SET nama_mobil ='$nama_mobil', kode_mobil = '$kode_mobil', warna_mobil = '$warna_mobil', cc_mobil = '$cc_mobil', harga_sewa = '$harga_sewa', gambar_mobil = '$gambar' WHERE id='$id'");
+     $query = mysqli_query($conn, "UPDATE mobils SET nama_mobil ='$nama_mobil', kode_mobil = '$kode_mobil', warna_mobil = '$warna_mobil', cc_mobil = '$cc_mobil', harga_sewa = '$harga_sewa', gambar_mobil = '$gambar' WHERE kode_mobil ='$id'");
      
      return $query;
      

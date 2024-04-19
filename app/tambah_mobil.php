@@ -9,9 +9,9 @@ if(isset($_POST['btn-tambah'])){
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 </style>
 <?php require_once('../layouts/header.php') ?>
-<div class="container mx-auto pt-28">
+<div class="container mx-auto pt-28 h-[800px]">
      <h1 class="text-3xl font-semibold mb-8">Form Tambah Data Mobil</h1>
-     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4  grid grid-cols-3 gap-5" action="" method="POST">
+     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4  grid grid-cols-3 gap-5 py-10" action="" method="POST">
           <div class="mb-4">
                <label class="block text-gray-700 text-sm font-bold mb-2" for="namaMobil">
                     Nama Mobil
@@ -71,7 +71,4 @@ if(isset($_POST['btn-tambah'])){
           </div>
      </form>
 </div>
-
-
-
 <?php require_once('../layouts/footer.php') ?>

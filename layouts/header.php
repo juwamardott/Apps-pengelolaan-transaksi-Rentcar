@@ -17,19 +17,21 @@
                <ul>
                     <li class="flex justify-between  p-1">
                          <a href="<?= BASEURL?>"
-                              class="hover:text-white block hover:bg-purple-400 p-2 rounded-md">Home</a>
+                              class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Home</a>
                          <a href="<?= BASEURL?>/app/transaksi_mobil.php"
-                              class="hover:text-white block hover:bg-purple-400 p-2 rounded-md">Transaksi</a>
+                              class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Transaksi</a>
                          <a href="<?= BASEURL?>/app/data_mobil.php"
-                              class="hover:text-white block hover:bg-purple-400 p-2 rounded-md">Data Mobil</a>
+                              class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Data
+                              Mobil</a>
                          <a href="<?=BASEURL?>/app/about.php"
-                              class="hover:text-white block hover:bg-purple-400 p-2 rounded-md">Tentang Kami</a>
+                              class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Tentang
+                              Kami</a>
                     </li>
                </ul>
           </div>
-          <div class="mr-5 px-2 py-1 bg-purple-600 text-white shadow-lg rounded">
+          <div class="mr-5 px-1 py-1 bg-purple-600 text-white shadow-lg rounded">
                <a href="<?=BASEURL?>/login.php" id="hamburger">LOGIN
                </a>
           </div>
      </div>
-     <div class="w-full h-auto bg-gradient-to-tr form from-slate-900 to-purple-900 ">
+     <div class="w-full h-auto bg-gradient-to-tr form from-slate-900 to-purple-900">
