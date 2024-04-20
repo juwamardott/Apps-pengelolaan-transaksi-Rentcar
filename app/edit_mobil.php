@@ -6,7 +6,7 @@ $id = $_GET['kode'];
 // var_dump($id);
 if(isset($_POST['btn-update'])){
      updateMobil($_POST, $id);
-     header('location:data_mobil.php');
+     header('location:admin/data_mobil_admin.php');
 }
 ?>
 <link rel="stylesheet" href="<?= BASEURL?>/assets/css/output.css">

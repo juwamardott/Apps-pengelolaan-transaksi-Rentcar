@@ -2,6 +2,7 @@
 require './function.php';
 if(isset($_POST['btn-tambah'])){
      insertMobil($_POST);
+     header('location:admin/data_mobil_admin.php');
 }
 ?>
 <link rel="stylesheet" href="<?= BASEURL?>/assets/css/output.css">

@@ -1,5 +1,5 @@
 <?php
-require './function.php';
+require '../function.php';
 $data = getAllpesanan();
 $mbl = getAll();
 ?>
@@ -7,7 +7,7 @@ $mbl = getAll();
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 </style>
-<?php require_once('../layouts/header.php') ?>
+<?php require_once('../../layouts/header_admin.php') ?>
 <div class="mx-auto pt-28 px-4 h-[800px]">
      <div class="flex items-center justify-between my-4 text-white">
           <h1 class="text-3xl font-semibold ">Manajemen Pesanan Mobil</h1>
@@ -21,8 +21,8 @@ $mbl = getAll();
           </p>
           <a href="<?=BASEURL?>/app/reset.php" class="text-base block bg-green-400 p-2 rounded-md text-white">Reset</a>
      </div>
-     <div class="overflow-x-auto bg-white">
-          <table class="min-w-full table-auto text-sm border-separate border">
+     <div class="overflow-x-auto overflow-scroll bg-white h-[500px] p-1">
+          <table class="min-w-full table-auto text-sm border-separate border p-2">
                <thead class="bg-teal-500 text-white">
                     <tr>
                          <th class="py-2 px-4">Nama Penyewa</th>
@@ -60,7 +60,8 @@ $mbl = getAll();
                          </td>
                          <td class="py-2 px-4 border-b border">
                               <a href="<?= BASEURL?>/app/kembali.php?kode=<?=$row['kode_transaksi']?>"
-                                   class="block p-1 bg-red-500 text-white rounded-sm">Selesai</a>
+                                   class="block p-1 bg-red-500 text-white rounded-sm"' 
+                                   onclick="return confirm(' Apa Anda Yakin Transaksi Mobil ini Sudah Dikembalikan ? ')">Selesai</a>
                          </td>
                     </tr>
                     <?php endwhile; ?>
@@ -69,4 +70,4 @@ $mbl = getAll();
           </table>
      </div>
 </div>
-<?php require_once('../layouts/footer.php') ?>
+<?php require_once('../../layouts/footer.php') ?>

@@ -16,21 +16,21 @@
           <div class="w-[60%]" id="navbar">
                <ul>
                     <li class="flex justify-around  p-1">
-                         <a href="<?= BASEURL?>"
-                              class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Home</a>
-                         <!-- <a href="<?= BASEURL?>/app/transaksi_mobil.php"
+                         <!-- <a href="<?= BASEURL?>"
+                              class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Home</a> -->
+                         <a href="<?= BASEURL?>/app/admin/index_admin.php"
                               class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Transaksi</a>
-                         <a href="<?= BASEURL?>/app/data_mobil.php"
+                         <a href="<?= BASEURL?>/app/admin/data_mobil_admin.php"
                               class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Data
-                              Mobil</a> -->
-                         <a href="<?=BASEURL?>/app/about.php"
+                              Mobil</a>
+                         <!-- <a href="<?=BASEURL?>/app/about.php"
                               class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Tentang
-                              Kami</a>
+                              Kami</a> -->
                     </li>
                </ul>
           </div>
           <div class="mr-5 px-1 py-1 bg-purple-600 text-white shadow-lg rounded">
-               <a href="<?=BASEURL?>/app/login.php" id="hamburger">LOGIN
+               <a href="<?=BASEURL?>/index.php" id="hamburger">LOGOUT
                </a>
           </div>
      </div>

@@ -6,7 +6,7 @@ if(!$conn){
      echo 'Disconnected';
 }
 
-define('BASEURL', 'http://localhost/si-rentcar/');
+define('BASEURL', 'http://localhost/si-rentcar');
 date_default_timezone_set('Asia/Jakarta');
 function getAll(){
      global $conn;
@@ -101,7 +101,7 @@ function CheckMobil($userbaru){
                     }else if(strtotime($userbaru['jam_ambil']) > strtotime('+2 hours', strtotime($userlama['jam_kembali']))){                      
                          insertPesanan($userbaru);
                          $transaksiBerhasil = true; // Set variabel penanda menjadi true
-                         header('location:transaksi_mobil.php');
+                         header('location:admin/index_admin.php');
                          break;
                     }
                }else if($userbaru['tgl_kembali'] == $userlama['tgl_ambil']){
@@ -122,7 +122,7 @@ function CheckMobil($userbaru){
           return true;
           }
           insertPesanan($userbaru);
-          header('location:transaksi_mobil.php');
+          header('location:../index.php');
           return true;
 }
 
@@ -138,4 +138,24 @@ function insertMobil($data){
                VALUES ('$nama_mobil', '$kode_mobil', '$warna_mobil', '$cc_mobil', '$harga_mobil', '$gambar')";
      $result = mysqli_query($conn, $query);
      return $result;
+}
+
+
+function register($data) {
+     global $conn;
+
+     $email = $data['email'];
+     $password = $data['password'];
+
+     $userlama = mysqli_query($conn,"SELECT * FROM users WHERE email = '$email'");
+     if(mysqli_fetch_assoc($userlama)){
+          echo '<script>alert("Email sudah terdaftar, Silahkan gunakan email lain")</script>';
+          return false;
+     }
+
+     $password =  password_hash($password, PASSWORD_DEFAULT);
+     mysqli_query($conn,"INSERT INTO users (email, password) VALUES ('$email','$password')");
+
+     return mysqli_affected_rows($conn);
+     
 }
