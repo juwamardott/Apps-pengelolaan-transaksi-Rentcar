@@ -6,7 +6,7 @@ if(!$conn){
      echo 'Disconnected';
 }
 
-define('BASEURL', 'http://localhost:8080/si-rentcar');
+define('BASEURL', 'http://localhost/si-rentcar/');
 date_default_timezone_set('Asia/Jakarta');
 function getAll(){
      global $conn;
