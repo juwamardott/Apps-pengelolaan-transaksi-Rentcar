@@ -159,3 +159,35 @@ function register($data) {
      return mysqli_affected_rows($conn);
      
 }
+
+
+
+// function resetStatus(){
+//      global $conn;
+//      $query = mysqli_query($conn,"UPDATE mobils SET status = 1");
+//      return $query;
+// }
+
+// function showMobilFree($kode){
+//      global $conn;
+//      $query = mysqli_query($conn,"SELECT * FROM mobils WHERE kode_mobil = '$kode'");
+//      return $query;
+// }
+
+
+// function MobilFree($data){
+//      global $conn;
+//      $start_date = $data['start_date'];
+//      $end_date = $data['end_date'];
+//      $mobilend = getAllpesanan();
+//      while($mbl = mysqli_fetch_assoc($mobilend)){
+//           if($start_date == $mbl['tgl_ambil'] || $end_date == $mbl['tgl_kembali']){
+//                showMobilFree($mbl['kode_mobil']);
+//           }
+//           else{
+           
+//           }
+         
+//      }
+     
+// }
