@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!isset($_SESSION['login'])){
+     header('location:login.php');
+     exit;
+}
 require '../function.php';
 $mbl = getAll();
 ?>
@@ -7,15 +12,15 @@ $mbl = getAll();
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 </style>
 <?php require_once('../../layouts/header_admin.php') ?>
-<div class="mx-auto pt-28 px-4 h-[800px]">
+<div class="mx-auto pt-28 px-4 h-[800px] p-1">
      <div class="flex items-center justify-between my-4 text-white">
           <h1 class="text-3xl font-semibold ">Data Mobil</h1>
           <a href="<?=BASEURL?>/app/tambah_mobil.php"
                class="text-base block bg-blue-500 p-2 rounded-md text-white">Tambah
                mobil</a>
      </div>
-     <div class="overflow-x-auto bg-white">
-          <table class="min-w-full table-auto text-sm border-separate border">
+     <div class="overflow-x-auto bg-white p-1">
+          <table class="min-w-full table-auto text-sm border-separate border p-2">
                <thead class="bg-teal-500 text-white">
                     <tr>
                          <th class="py-2 px-4">Nama Mobil</th>
@@ -45,7 +50,6 @@ $mbl = getAll();
                          </td>
                     </tr>
                     <?php endwhile; ?>
-                    <!-- Tambahkan baris data lainnya sesuai kebutuhan -->
                </tbody>
           </table>
      </div>

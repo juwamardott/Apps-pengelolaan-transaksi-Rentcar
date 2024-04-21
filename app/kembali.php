@@ -5,5 +5,5 @@ require './function.php';
 $id = $_GET['kode'];
 $hapus = mysqli_query($conn,"DELETE FROM transaksis WHERE kode_transaksi = '$id'");
 // tambahStock($_GET['kode']);
-header('location:transaksi_mobil.php');
+header('location:admin/index_admin.php');
 ?>

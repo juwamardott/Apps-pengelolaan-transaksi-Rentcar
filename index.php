@@ -1,9 +1,7 @@
 <?php 
+
 require './app/function.php';
 $data = getAll();
-// while($psn = mysqli_fetch_assoc(getAllpesanan())){
-//      var_dump($psn);
-// }
 
 ?>
 <link rel="stylesheet" href="<?= BASEURL?>/assets/css/output.css">

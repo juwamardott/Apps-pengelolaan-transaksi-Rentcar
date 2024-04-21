@@ -13,7 +13,7 @@ if(isset($_POST['btn-register'])){
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 </style>
-<?php require_once('../layouts/header.php') ?>
+<?php require_once('../layouts/header_login.php') ?>
 <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 h-[500px] pt-20">
      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
           <img class="mx-auto h-56 w-auto" src="<?=BASEURL?>/assets/img/logo.png" alt="Your Company">
@@ -61,4 +61,4 @@ if(isset($_POST['btn-register'])){
      </div>
 </div>
 
-<?php require_once('../layouts/footer.php') ?>
+<?php require_once('../layouts/footer_admin.php') ?>

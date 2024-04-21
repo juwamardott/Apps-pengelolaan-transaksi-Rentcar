@@ -4,7 +4,7 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Aplikasi Kelola Rentcar</title>
+     <title>Aplikasi Rentcar</title>
      <link rel="stylesheet" href="<?=BASEURL?>/assets/css/output.css">
 </head>
 
@@ -18,14 +18,13 @@
                     <li class="flex justify-around  p-1">
                          <a href="<?= BASEURL?>"
                               class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Home</a>
-                         <!-- <a href="<?= BASEURL?>/app/transaksi_mobil.php"
-                              class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Transaksi</a>
-                         <a href="<?= BASEURL?>/app/data_mobil.php"
-                              class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Data
-                              Mobil</a> -->
+                         <a href="<?= BASEURL?>/app/detail_mobil.php"
+                              class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Detail Mobil</a>
                          <a href="<?=BASEURL?>/app/about.php"
                               class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Tentang
                               Kami</a>
+                         <a href="<?= BASEURL?>/app/masukan.php"
+                              class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Beri Masukan Anda</a>
                     </li>
                </ul>
           </div>

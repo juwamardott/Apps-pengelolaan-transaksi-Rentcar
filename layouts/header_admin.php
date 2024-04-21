@@ -4,7 +4,7 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Aplikasi Kelola Rentcar</title>
+     <title>Admin Rentcar</title>
      <link rel="stylesheet" href="<?=BASEURL?>/assets/css/output.css">
 </head>
 
@@ -30,7 +30,7 @@
                </ul>
           </div>
           <div class="mr-5 px-1 py-1 bg-purple-600 text-white shadow-lg rounded">
-               <a href="<?=BASEURL?>/index.php" id="hamburger">LOGOUT
+               <a href="<?=BASEURL?>/app/logout.php" id="hamburger">LOGOUT
                </a>
           </div>
      </div>
