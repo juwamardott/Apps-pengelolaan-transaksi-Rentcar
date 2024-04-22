@@ -3,9 +3,9 @@
 require './app/function.php';
 $data = getAll();
 
-// if(isset($_POST['btn-cari'])){
-//      $data = MobilFree($_POST);
-// }
+if(isset($_POST['btn-cari'])){
+     MobilFree($_POST);
+}
 
 
 ?>
@@ -66,7 +66,7 @@ $data = getAll();
 
 
 
-<div class="p-2 border mt-10 w-[95%] mx-auto grid lg:grid-cols-3 gap-4 sm:grid-cols-1">
+<div class="p-2 mt-10 w-[95%] mx-auto grid lg:grid-cols-3 gap-4 sm:grid-cols-1">
      <?php while($row = mysqli_fetch_assoc($data)) :  ?>
      <div class="p-5 pb-20 shadow-lg z-30 overflow-hidden relative bg-white bg-opacity-90 rounded-md group">
           <img src="<?=BASEURL?>/assets/img/<?= $row['gambar_mobil']?>" alt="" class="w-72 mx-auto drop-shadow-2xl">

@@ -6,7 +6,7 @@ require './function.php';
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 </style>
 <?php require_once('../layouts/header.php') ?>
-<div class="isolate px-6 py-24 sm:py-32 lg:px-8 h-[800px]">
+<div class="isolate px-6 py-24 sm:py-32 lg:px-8 h-[1000px]">
      <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
           aria-hidden="true">
           <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"

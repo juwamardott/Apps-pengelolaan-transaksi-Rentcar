@@ -111,7 +111,7 @@ function CheckMobil($userbaru){
                          }                                  
                }else if(($userbaru['tgl_ambil'] >= $userlama['tgl_ambil'] && $userbaru['tgl_ambil'] <= $userlama['tgl_kembali']) ||
                ($userbaru['tgl_kembali'] >= $userlama['tgl_ambil'] && $userbaru['tgl_kembali'] <= $userlama['tgl_kembali'])){
-                    echo '<script>alert("Mobil '.$userlama['nama_mobil'].' '.$userlama['warna_mobil'].' sudah disewa pada tanggal '.$userlama['tgl_ambil'].' sampai '. $userlama['tgl_kembali'] .' oleh '.$userlama['nama_penyewa'].'")</script>';
+                    echo '<script>alert("Mobil '.$userlama['nama_mobil'].' '.$userlama['warna_mobil'].' sudah disewa pada tanggal '.$userlama['tgl_ambil'].' sampai '. $userlama['tgl_kembali'].'")</script>';
                     return false;
                }else{
                     
@@ -162,11 +162,17 @@ function register($data) {
 
 
 
-// function resetStatus(){
-//      global $conn;
-//      $query = mysqli_query($conn,"UPDATE mobils SET status = 1");
-//      return $query;
-// }
+function resetStatus(){
+     global $conn;
+     $query = mysqli_query($conn,"UPDATE mobils SET status = 1");
+     return $query;
+}
+
+function Available($kode, $param){
+     global $conn;
+     $query = mysqli_query($conn,"UPDATE mobils SET status = $param WHERE kode_mobil = '$kode'");
+     return $query;
+}
 
 // function showMobilFree($kode){
 //      global $conn;
@@ -175,19 +181,19 @@ function register($data) {
 // }
 
 
-// function MobilFree($data){
-//      global $conn;
-//      $start_date = $data['start_date'];
-//      $end_date = $data['end_date'];
-//      $mobilend = getAllpesanan();
-//      while($mbl = mysqli_fetch_assoc($mobilend)){
-//           if($start_date == $mbl['tgl_ambil'] || $end_date == $mbl['tgl_kembali']){
-//                showMobilFree($mbl['kode_mobil']);
-//           }
-//           else{
+function MobilFree($data){
+     global $conn;
+     $start_date = $data['start_date'];
+     $end_date = $data['end_date'];
+     $mobilend = getAllpesanan();
+     while($mbl = mysqli_fetch_assoc($mobilend)){
+          if($start_date == $mbl['tgl_ambil'] || $end_date == $mbl['tgl_kembali']){
+               return Available($mbl['kode_mobil'], 0);
+          }
+          else{
            
-//           }
+          }
          
-//      }
+     }
      
-// }
+}
