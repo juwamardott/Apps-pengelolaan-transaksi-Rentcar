@@ -18,8 +18,8 @@
                     <li class="flex justify-around  p-1">
                          <a href="<?= BASEURL?>"
                               class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Home</a>
-                         <a href="<?= BASEURL?>/app/detail_mobil.php"
-                              class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Detail Mobil</a>
+                         <!-- <a href="<?= BASEURL?>/app/detail_mobil.php"
+                              class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Detail Mobil</a> -->
                          <a href="<?=BASEURL?>/app/about.php"
                               class="hover:text-white block hover:bg-purple-800 p-1 rounded-md">Tentang
                               Kami</a>
