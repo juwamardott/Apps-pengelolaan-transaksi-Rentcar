@@ -101,7 +101,7 @@ function CheckMobil($userbaru){
                     }else if(strtotime($userbaru['jam_ambil']) > strtotime('+2 hours', strtotime($userlama['jam_kembali']))){                      
                          insertPesanan($userbaru);
                          $transaksiBerhasil = true; // Set variabel penanda menjadi true
-                         header('location:admin/index_admin.php');
+                         header('location:../index.php');
                          break;
                     }
                }else if($userbaru['tgl_kembali'] == $userlama['tgl_ambil']){
